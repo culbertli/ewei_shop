@@ -1,0 +1,28 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/template/account/default3/style.css?v=2.0.0">
+<style type="text/css">
+    .header {background-image: url("{php echo empty($set['wap']['bg'])?'../addons/ewei_shopv2/template/account/default3/bg.jpg':tomedia($set['wap']['bg'])}"); background-repeat: n}
+    .btn {background: {if !empty($set['wap']['color'])}{$set['wap']['color']}{else}#43afcf{/if};}
+    .text a {color: {if !empty($set['wap']['color'])}{$set['wap']['color']}{else}#43afcf{/if};}
+    .agr-detail {
+        padding: 44px 20px 0 20px;
+        overflow: auto;
+        height: 100%;
+    }
+</style>
+<div class="fui-page">
+    {if is_h5app()}
+    <div class="fui-header">
+        <div class="fui-header-left">
+            <a class="back"> </a>
+        </div>
+        <div class="title">隐私协议</div>
+        <div class="fui-header-right" data-nomenu="true"></div>
+    </div>
+    {/if}
+    <div class="agr-detail">
+        {$agr_content}
+    </div>
+
+</div>
+{template '_footer'}
